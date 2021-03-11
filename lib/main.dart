@@ -8,8 +8,8 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      builder: (context) => TaskData(),
+    return ChangeNotifierProvider<TaskData>(
+      create: (context) => TaskData(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         home: TasksScreen(),
